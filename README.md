@@ -68,8 +68,8 @@ Search and compare at least 3 profile web sites.  Record your findings in the ta
 Link To Site  | One Thing I'd Like To Incorporate | Initial Research On That Item
 | ------------- | ------------- | ------------- |
 | [https://www.olivier-guilleux.com/](https://www.olivier-guilleux.com/)| visually interactive frames around project previews |   |
-|[http://seanhalpin.io/](http://seanhalpin.io/) | modern-design feel, creative styling |   |
-| [http://www.rleonardi.com/interactive-resume/](http://mattfarley.ca/) |  sideward/upward scrolling |   |
+|[http://seanhalpin.io/](http://seanhalpin.io/) | modern-design feel, clean styling |   |
+| [http://www.rleonardi.com/interactive-resume/](http://mattfarley.ca/) |  creative scrolling animation |   |
 
 #### Starter Code
 
