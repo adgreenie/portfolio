@@ -28,9 +28,14 @@ function addProjects(projects) {
                                 <div class="project-text" style="text-align: ${sides[side+1]}; padding: 20px;">
                                     <h5>${project.title}</h5>
                                     <p>${project.description}</p>
-                                    <a href="${project.url}" target="_blank" class="btn btn-primary">Check it out!</a>
+                                    <a href="${project.url}" target="_blank" class="btn btn-primary" style="visibility: hidden;">Check it out!</a>
                                 </div>
                             </div>`)
+        $projectDiv.hover(function() {
+            $(this).find('a').css('visibility','visible')
+        }, function() {
+            $(this).find('a').css('visibility','hidden')
+        })
         $div.append($projectDiv)
     })
     $main.append(`<h1 style="text-align: center">Projects</h1>
