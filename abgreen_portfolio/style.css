@@ -1,0 +1,43 @@
+.all-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    width: 100%;
+    border: 5px solid #EFF0F1;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.project-img {
+    width: 50vw;
+    height: 30vw;
+    object-fit: contain;
+    background-color: #EFF0F1;
+    border-radius: 10px;
+}
+
+.divider {
+    padding: 2px;
+    width: 75vw;
+    background-color: #EFF0F1;
+    margin: 0 auto
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+    .project {
+        width: 40vw;
+    }
+    .project-img {
+        width: 25vw;
+        height: 15vw;
+    }
+}
