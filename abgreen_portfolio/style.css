@@ -1,4 +1,48 @@
-.all-projects {
+header {
+    position: fixed;
+    width: 100vw;
+    text-transform: capitalize;
+}
+
+main {
+    margin-top: 100px;
+    position: absolute;
+    left: 0; 
+    transition: 1s left;
+    /* overflow-x: hidden; */
+}
+
+.screen-scroll {
+    position: absolute;
+    left: -200vw;
+    transition: 1s left;
+}
+
+.home-page {
+
+}
+
+.about-page {
+
+}
+
+.project-page {
+    position: absolute;
+    left: 200vw;
+    width: 100vw;
+}
+
+.contact-page {
+
+}
+
+.off-screen {
+    height: 100vh;
+    background-color: black;
+    /* Prevent off-screen pages from affecting vertical scrolling */
+}
+
+.project-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

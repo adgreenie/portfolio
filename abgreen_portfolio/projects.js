@@ -17,30 +17,30 @@ fetch(source)
     })
 
 function addProjects(projects) {
-    $main = $('main')
-    $div = $('<div>').addClass('all-projects')
+    let $projectPage = $('<p>').addClass('project-page').addClass('off-screen')
+    let $ul = $('<ul>').addClass('project-list')
     
     projects.forEach((project, i) => {
         let sides = ['left','right','left']
         let side = i % 2
-        let $projectDiv = $(`<div class="project">
-                                <img src="${project.image}" class="project-img" alt="${project.title}" style="float: ${sides[side]};">
-                                <div class="project-text" style="text-align: ${sides[side+1]}; padding: 20px;">
-                                    <h5>${project.title}</h5>
-                                    <p>${project.description}</p>
-                                    <a href="${project.url}" target="_blank" class="btn btn-primary" style="visibility: hidden;">Check it out!</a>
-                                </div>
-                            </div>`)
-        $projectDiv.hover(function() {
+        let $li = $(`<li class="project">
+                        <img src="${project.image}" class="project-img" alt="${project.title}" style="float: ${sides[side]};">
+                        <div class="project-text" style="text-align: ${sides[side+1]}; padding: 20px;">
+                            <h5>${project.title}</h5>
+                            <p>${project.description}</p>
+                            <a href="${project.url}" target="_blank" class="btn btn-primary" style="visibility: hidden;">Check it out!</a>
+                        </div>
+                    </li>`)
+        $li.hover(function() {
             $(this).find('a').css('visibility','visible')
             $(this).find('img').css('object-fit','cover')
         }, function() {
             $(this).find('a').css('visibility','hidden')
             $(this).find('img').css('object-fit','contain')
         })
-        $div.append($projectDiv)
+        $ul.append($li)
     })
-    $main.append(`<h1 style="text-align: center">Projects</h1>
-                <div class="divider"></div>`)
-    $main.append($div)
+    $projectPage.append(`<h1 style="text-align: center">Projects</h1>
+                        <div class="divider"></div>`, $ul)
+    $('main').append($projectPage)
 }
