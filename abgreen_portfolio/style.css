@@ -16,7 +16,8 @@
 .project:hover {
     background-color: #69c07e;
     color: white;
-    border: 5px solid #69c07e;
+    border-color: #69c07e;
+    box-shadow: 10px 10px 5px #69c07e;
 }
 
 .project-img {
@@ -32,10 +33,6 @@
     width: 75vw;
     background-color: #EFF0F1;
     margin: 0 auto
-}
-
-.highlight {
-    background-color: #d5ecb0;
 }
 
 /* tablet */

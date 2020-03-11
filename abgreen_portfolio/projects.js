@@ -33,8 +33,10 @@ function addProjects(projects) {
                             </div>`)
         $projectDiv.hover(function() {
             $(this).find('a').css('visibility','visible')
+            $(this).find('img').css('object-fit','cover')
         }, function() {
             $(this).find('a').css('visibility','hidden')
+            $(this).find('img').css('object-fit','contain')
         })
         $div.append($projectDiv)
     })
