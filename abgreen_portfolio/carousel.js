@@ -14,6 +14,7 @@ fetch(imgSource)
         })
         addImages(images)
     })
+    .catch(err => console.log('err', err))
 
 function addImages(images) {
     // based around Bootstrap carousel, found here: https://getbootstrap.com/docs/4.0/components/carousel/

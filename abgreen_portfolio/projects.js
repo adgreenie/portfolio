@@ -15,6 +15,7 @@ fetch(source)
         })
         addProjects(projects)
     })
+    .catch(err => console.log('err', err))
 
 function addProjects(projects) {
     let $ul = $('<ul>').addClass('project-list')
