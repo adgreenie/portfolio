@@ -5,7 +5,7 @@ let $navList = $('<ul>').addClass('navbar-nav mr-auto')
 let $previous = $('#home')
 
 pages.forEach((page, i) => {
-    let $div = $(`<div id="${page}" class="page" style="left: ${i*100}vw;"></div>`)
+    let $div = $(`<div id="${page}" class="page"></div>`)
     if (i > 0) {
         $div.addClass('off-screen')
         $div.append(`<div class="divider"></div>
@@ -34,10 +34,10 @@ pages.forEach((page, i) => {
 $('#navbarSupportedContent').append($navList)
 
 $(window).scroll(() => {
-    if($(window).scrollTop() + $(window).height() !== $(document).height()) {
-        $('footer').css('opacity', 0)
+    if($(window).scrollTop() + $(window).height() === $(document).height() || $(window).scrollTop() === 0) {
+        $('footer').css('opacity', 1)
     }
     else {
-        $('footer').css('opacity', 1)
+        $('footer').css('opacity', 0)
     }
  })

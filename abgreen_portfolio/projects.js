@@ -1,4 +1,4 @@
-let url = 'https://docs.google.com/spreadsheets/d/19l0xoqkGrebEHkghxC_OxA2PZbiAPmdOtf2DpZ3guV8/edit#gid=0'
+// https://docs.google.com/spreadsheets/d/19l0xoqkGrebEHkghxC_OxA2PZbiAPmdOtf2DpZ3guV8/edit#gid=0
 let id = '19l0xoqkGrebEHkghxC_OxA2PZbiAPmdOtf2DpZ3guV8'
 let source = `https://spreadsheets.google.com/feeds/list/${id}/od6/public/values?alt=json`
 
