@@ -5,16 +5,19 @@ let $navList = $('<ul>').addClass('navbar-nav mr-auto')
 let $previous = $('#home')
 
 pages.forEach((page, i) => {
-    let $div = $(`<div id="${page}" class="page" style="left: ${i*100}vw;">
-                    <h1>We are on the ${page} page</h1>
-                </div>`)
-    i > 0 ? $div.addClass('off-screen') : ''
+    let $div = $(`<div id="${page}" class="page" style="left: ${i*100}vw;"></div>`)
+    if (i > 0) {
+        $div.addClass('off-screen')
+        $div.append(`<div class="divider"></div>
+                    <h1>${page}</h1>
+                    <div class="divider"></div>`)
+    }
     $('main').append($div)
 
     let $li = $(`<li class="nav-item">
                     <a class="nav-link" href="#${page}">${page}</a>
                 </li>`)
-    $li.on('click', function() {
+    $li.click(() => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'

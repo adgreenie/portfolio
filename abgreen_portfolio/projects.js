@@ -39,6 +39,5 @@ function addProjects(projects) {
         })
         $ul.append($li)
     })
-    $('#projects').append(`<h1>Projects</h1>
-                        <div class="divider"></div>`, $ul)
+    $('#projects').append($ul)
 }
