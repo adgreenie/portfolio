@@ -24,7 +24,7 @@ nav {
 
 main {
     /* grid-area: main; */
-    padding: 70px 10px 0;
+    padding: 70px 0 0;
     position: absolute;
     transition: left 1s;
 }
