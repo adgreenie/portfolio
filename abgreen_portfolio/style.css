@@ -14,34 +14,23 @@ header {
 main {
     padding-top: 70px;
     position: absolute;
-    left: 0;
-    transition: 1s left;
+    transition: left 1s;
 }
 
-.screen-scroll {
+h1 {
+    text-align: center;
+}
+
+/* .screen-scroll {
     position: absolute;
     left: -200vw;
     transition: 1s left;
-}
+} */
 
-.home-page {
-
-}
-
-.about-page {
-
-}
-
-.project-page {
+.page {
     position: absolute;
-    left: 200vw;
     width: 100vw;
-    /* opacity: 1; */
-    transition: left 1s, opacity .5s;
-}
-
-.contact-page {
-
+    transition: opacity .5s;
 }
 
 .off-screen {

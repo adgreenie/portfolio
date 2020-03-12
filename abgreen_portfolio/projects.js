@@ -17,7 +17,6 @@ fetch(source)
     })
 
 function addProjects(projects) {
-    let $projectPage = $('<p>').addClass('project-page').addClass('off-screen')
     let $ul = $('<ul>').addClass('project-list')
     
     projects.forEach((project, i) => {
@@ -40,7 +39,6 @@ function addProjects(projects) {
         })
         $ul.append($li)
     })
-    $projectPage.append(`<h1 style="text-align: center">Projects</h1>
+    $('#projects').append(`<h1>Projects</h1>
                         <div class="divider"></div>`, $ul)
-    $('main').append($projectPage)
 }

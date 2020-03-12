@@ -1,21 +1,16 @@
-// const navItems = [{
-//     name: 'About',
-//     link: '/about'
-// },{
-//     name: 'Projects',
-//     link: '/projects'
-// },{
-//     name: 'Contact',
-//     link: '/contact'
-// }]
-
-const pages = ['home','about','project','contact']
+const pages = ['home','about','projects','contact']
 
 let $navList = $('<ul>').addClass('navbar-nav mr-auto')
 
-let $previous = $('.home-page')
+let $previous = $('#home')
 
 pages.forEach((page, i) => {
+    let $div = $(`<div id="${page}" class="page" style="left: ${i*100}vw;">
+                    <h1>We are on the ${page} page</h1>
+                </div>`)
+    i > 0 ? $div.addClass('off-screen') : ''
+    $('main').append($div)
+
     let $li = $(`<li class="nav-item">
                     <a class="nav-link" href="#${page}">${page}</a>
                 </li>`)
@@ -26,10 +21,10 @@ pages.forEach((page, i) => {
         })
         $('main').css('left', `${-i*100}vw`)
         setTimeout(() => {
-            $(`.${page}-page`).removeClass('off-screen')
+            $(`#${page}`).removeClass('off-screen')
         }, 800)
         $previous.addClass('off-screen')
-        $previous = $(`.${page}-page`)
+        $previous = $(`#${page}`)
     })
     $navList.append($li)
 })
