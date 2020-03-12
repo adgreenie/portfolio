@@ -29,8 +29,10 @@ pages.forEach((page, i) => {
     $navList.append($li)
     
     $(window).scroll(() => {
+        let viewTop = $(window).scrollTop()
         let divTop = $div.offset().top
-        if($(window).scrollTop() > divTop - (.4 * $(window).height()) && $(window).scrollTop() < divTop + (.4 * $(window).height())) {
+        let gap = .4 * $(window).height()
+        if(viewTop > divTop - gap && viewTop < divTop + $div.height() - gap) {
             $div.css('opacity', 1)
             console.log($(window).height())
             console.log($div.position())
