@@ -55,10 +55,6 @@ h1 {
     margin: 0 auto
 }
 
-.off-screen {
-    opacity: .5;
-}
-
 .page {
     padding: 70px 0 0;
     width: 100vw;

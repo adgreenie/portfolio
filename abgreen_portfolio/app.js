@@ -7,7 +7,7 @@ let $previous = $('#home')
 pages.forEach((page, i) => {
     let $div = $(`<div id="${page}" class="page"></div>`)
     if (i > 0) {
-        $div.addClass('off-screen')
+        // $div.addClass('off-screen')
         $div.append(`<div class="divider"></div>
                     <h1>${page}</h1>
                     <div class="divider"></div>`)
@@ -18,18 +18,27 @@ pages.forEach((page, i) => {
                     <a class="nav-link" href="#${page}">${page}</a>
                 </li>`)
     $li.click(() => {
-        window.scrollTo({
-            top: 0,
+        $('main').scrollTo({
+            top: $div.scrollTop(),
             behavior: 'smooth'
         })
-        $('main').css('left', `${-i*100}vw`)
-        setTimeout(() => {
-            $(`#${page}`).removeClass('off-screen')
-        }, 800)
-        $previous.addClass('off-screen')
-        $previous = $(`#${page}`)
+        // $(`#${page}`).removeClass('off-screen')
+        // $previous.addClass('off-screen')
+        // $previous = $(`#${page}`)
     })
     $navList.append($li)
+    
+    $(window).scroll(() => {
+        let divTop = $div.offset().top
+        if($(window).scrollTop() > divTop - (.4 * $(window).height()) && $(window).scrollTop() < divTop + (.4 * $(window).height())) {
+            $div.css('opacity', 1)
+            console.log($(window).height())
+            console.log($div.position())
+        }
+        else {
+            $div.css('opacity', .5)
+        }
+     })
 })
 $('#navbarSupportedContent').append($navList)
 
