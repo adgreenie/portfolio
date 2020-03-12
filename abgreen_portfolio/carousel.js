@@ -10,6 +10,8 @@ const carouselImages = [{
     alt: 'city'
 }]
 
+// based on Bootstrap carousel, found here: https://getbootstrap.com/docs/4.0/components/carousel/
+
 $('#home').append(`<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators"></ol>
                     <div class="carousel-inner"></div>

@@ -32,3 +32,12 @@ pages.forEach((page, i) => {
     $navList.append($li)
 })
 $('#navbarSupportedContent').append($navList)
+
+$(window).scroll(() => {
+    if($(window).scrollTop() + $(window).height() !== $(document).height()) {
+        $('footer').css('opacity', 0)
+    }
+    else {
+        $('footer').css('opacity', 1)
+    }
+ })
