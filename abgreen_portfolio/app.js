@@ -32,10 +32,8 @@ pages.forEach((page, i) => {
         let viewTop = $(window).scrollTop()
         let divTop = $div.offset().top
         let gap = .4 * $(window).height()
-        if(viewTop > divTop - gap && viewTop < divTop + $div.height() - gap) {
+        if (viewTop > divTop - gap && viewTop < divTop + $div.height() - gap) {
             $div.css('opacity', 1)
-            console.log($(window).height())
-            console.log($div.position())
         }
         else {
             $div.css('opacity', .5)

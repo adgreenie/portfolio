@@ -1,11 +1,20 @@
-const aboutMe = `Welcome to my portfolio website! Here you will find 
-projects I have worked on over the course of General Assembly's Software 
-Engineering Immersive. This site will be updated to also display future 
-projects after I complete the program. I enjoy creative work that requires 
-critical thinking, and I'm excited to share my progress with you. If you are 
-interested in commissioning me for a project or have questions of any kind, 
-please fill out the form on the Contact page. Thanks for visiting!`
+// https://docs.google.com/spreadsheets/d/1GugDLpqIMNFKVZZkAWyH4oAt3DLkLKxEsRbMiEYvQgY/edit#gid=0
+let aboutId = '1GugDLpqIMNFKVZZkAWyH4oAt3DLkLKxEsRbMiEYvQgY'
+let aboutSource = `https://spreadsheets.google.com/feeds/list/${aboutId}/od6/public/values?alt=json`
 
-$about = $('#about')
-$about.append(`<img class="about-img" src="https://res.cloudinary.com/dnj7porin/image/upload/v1584005786/studiosaxpic_znu8ov.jpg">`)
-$about.append(`<p class="text-block">${aboutMe}</p>`)
+fetch(aboutSource)
+    .then(response => response.json())
+    .then(data => {
+        let aboutMe = {
+            image: data.feed.entry[0].gsx$image.$t,
+            text: data.feed.entry[0].gsx$text.$t
+        }
+        addAbout(aboutMe)
+    })
+    .catch(err => console.log('err', err))
+
+function addAbout(aboutMe) {
+    $about = $('#about')
+    $about.append(`<img class="about-img" src="${aboutMe.image}">`)
+    $about.append(`<p class="text-block">${aboutMe.text}</p>`)
+}

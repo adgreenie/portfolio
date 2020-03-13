@@ -15,10 +15,6 @@ nav {
     text-transform: capitalize;
 }
 
-main {
-    transition: left 1s;
-}
-
 footer {
     display: flex;
     justify-content: space-around;
