@@ -15,6 +15,6 @@ fetch(aboutSource)
 
 function addAbout(aboutMe) {
     $about = $('#about')
-    $about.append(`<img class="about-img" src="${aboutMe.image}">`)
+    $about.append(`<img class="circle-img" src="${aboutMe.image}">`)
     $about.append(`<p class="text-block">${aboutMe.text}</p>`)
 }

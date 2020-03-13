@@ -37,7 +37,7 @@ function addImages(images) {
         i === 0 ? $li.addClass('active') : active = ''
         $('.carousel-indicators').append($li)
         $('.carousel-inner').append(`<div class="carousel-item${active}">
-                                        <img class="d-block w-100 c-img" src="${image.url}" alt="${image.alt}">
+                                        <img class="d-block w-100 carousel-img" src="${image.url}" alt="${image.alt}">
                                     </div>`)
     })
 }
