@@ -22,12 +22,12 @@ function addProjects(projects) {
     
     projects.forEach((project, i) => {
         let sides = ['left','right','left']
-        let side = i % 2
+        let side = i % 2 // 0 if image is on left, 1 if on right
         let $li = $(`<li class="project">
-                        <p>
-                            <img src="${project.image}" alt="${project.title}" class="project-img" style="float: ${sides[side]};">
+                        <p style="padding-${sides[side+1]}: 10px; margin: 0;">
+                            <img src="${project.image}" alt="${project.title}" class="project-img" style="float: ${sides[side]}; margin-${sides[side+1]}: 10px;">
                             <span class="project-title">${project.title}</span><br>
-                            <span class="project-description">${project.description}</span><br>
+                            ${project.description}<br>
                             <a href="${project.url}" target="_blank" class="btn btn-primary project-button" style="visibility: hidden;">Check it out!</a>
                         </p>
                     </li>`)

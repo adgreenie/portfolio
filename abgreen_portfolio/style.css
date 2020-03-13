@@ -21,12 +21,13 @@ nav {
 }
 
 footer {
-    font-family: 'Noto Sans', sans-serif;
     display: flex;
     justify-content: space-around;
     width: 100vw;
     position: fixed;
     bottom: 0;
+    font-family: 'Noto Sans', sans-serif;
+    color: #3f3f3f;
     background-color: #69c07e;
     transition: bottom .5s;
     z-index: 50;
@@ -99,15 +100,10 @@ h1 {
 
 .project-title {
     font-size: 1.3em;
-    margin: 0 10px;
-}
-
-.project-description {
-    margin: 0 10px;
 }
 
 .project-button {
-    margin: 0 10px;
+    margin: 10px 0 0
 }
 
 .text-block {
