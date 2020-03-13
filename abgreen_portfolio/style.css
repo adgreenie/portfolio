@@ -4,11 +4,16 @@ body {
 }
 
 header {
+    font-family: 'Noto Sans', sans-serif;
     position: fixed;
     top: 0;
     width: 100vw;
-    /* prevent from being covered by body on downward scroll */
+    /* high z-index prevents being covered when overlapping body */
     z-index: 100;
+}
+
+main {
+    font-family: Dosis, sans-serif;
 }
 
 nav {
@@ -16,6 +21,7 @@ nav {
 }
 
 footer {
+    font-family: 'Noto Sans', sans-serif;
     display: flex;
     justify-content: space-around;
     width: 100vw;
@@ -27,7 +33,7 @@ footer {
 }
 
 footer > p {
-    padding: 15px 0 0
+    padding: 15px 0 0;
 }
 
 h1 {
@@ -64,7 +70,7 @@ h1 {
 .project-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .project {
@@ -91,15 +97,29 @@ h1 {
     border-radius: 10px;
 }
 
+.project-title {
+    font-size: 1.3em;
+    margin: 0 10px;
+}
+
+.project-description {
+    margin: 0 10px;
+}
+
+.project-button {
+    margin: 0 10px;
+}
+
 .text-block {
     width: 80vw;
-    max-width: 710px;
+    max-width: 675px;
     margin: 10px auto;
     padding: 10px;
     text-align: justify;
     background-color: #EFF0F1;
     border: 5px solid #EFF0F1;
     border-radius: 15px;
+    font-size: 1.3em;
 }
 
 /* tablet */

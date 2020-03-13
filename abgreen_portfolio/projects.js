@@ -24,12 +24,12 @@ function addProjects(projects) {
         let sides = ['left','right','left']
         let side = i % 2
         let $li = $(`<li class="project">
-                        <img src="${project.image}" class="project-img" alt="${project.title}" style="float: ${sides[side]};">
-                        <div class="project-text" style="text-align: ${sides[side+1]}; padding: 20px;">
-                            <h5>${project.title}</h5>
-                            <p>${project.description}</p>
-                            <a href="${project.url}" target="_blank" class="btn btn-primary" style="visibility: hidden;">Check it out!</a>
-                        </div>
+                        <p>
+                            <img src="${project.image}" alt="${project.title}" class="project-img" style="float: ${sides[side]};">
+                            <span class="project-title">${project.title}</span><br>
+                            <span class="project-description">${project.description}</span><br>
+                            <a href="${project.url}" target="_blank" class="btn btn-primary project-button" style="visibility: hidden;">Check it out!</a>
+                        </p>
                     </li>`)
         $li.hover(function() {
             $(this).find('a').css('visibility','visible')
