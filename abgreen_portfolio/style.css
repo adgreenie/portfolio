@@ -100,10 +100,12 @@ h1 {
 
 .project-title {
     font-size: 1.3em;
+    font-weight: 700;
 }
 
 .project-button {
-    margin: 10px 0 0
+    margin: 10px 0 0;
+    font-family: sans-serif;
 }
 
 .text-block {
