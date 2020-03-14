@@ -2,6 +2,7 @@
 let projectsId = '19l0xoqkGrebEHkghxC_OxA2PZbiAPmdOtf2DpZ3guV8'
 let projectsSource = `https://spreadsheets.google.com/feeds/list/${projectsId}/od6/public/values?alt=json`
 
+// API call for content on Projects page
 fetch(projectsSource)
     .then(response => response.json())
     .then(data => {

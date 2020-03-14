@@ -50,8 +50,10 @@ $(window).scroll(() => {
 let $quote = $('<p>').html(quote)
 let $footer = $('footer')
 
+// quote only added to footer if screen width is larger than mobile
 $(window).width() > 768 ? $footer.append($quote) : ''
 
+// dynamically determine whether to add or remove quote from footer
 $(window).resize(() => {
     if ($(window).width() <= 768) {
         $quote.detach()

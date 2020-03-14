@@ -2,6 +2,7 @@
 let aboutId = '1GugDLpqIMNFKVZZkAWyH4oAt3DLkLKxEsRbMiEYvQgY'
 let aboutSource = `https://spreadsheets.google.com/feeds/list/${aboutId}/od6/public/values?alt=json`
 
+// API call for image and text on About page
 fetch(aboutSource)
     .then(response => response.json())
     .then(data => {
