@@ -28,15 +28,23 @@ function addProjects(projects) {
                             <img src="${project.image}" alt="${project.title}" class="project-img" style="float: ${sides[side]}; margin-${sides[side+1]}: 10px;">
                             <span class="project-title">${project.title}</span><br>
                             ${project.description}<br>
-                            <a href="${project.url}" target="_blank" class="btn btn-primary project-button" style="visibility: hidden;">Check it out!</a>
+                            <a href="${project.url}" target="_blank" class="btn btn-primary project-button">Check it out!</a>
                         </p>
                     </li>`)
+        let $a = $li.find('a')
+        let $img = $li.find('img')    
         $li.hover(function() {
-            $(this).find('a').css('visibility','visible')
-            $(this).find('img').css('object-fit','cover')
+            $a.css({
+                'height': 'auto',
+                'visibility': 'visible'
+            })
+            $img.css('object-fit','cover')
         }, function() {
-            $(this).find('a').css('visibility','hidden')
-            $(this).find('img').css('object-fit','contain')
+            $a.css({
+                'height': 0,
+                'visibility': 'hidden'
+            })
+            $img.css('object-fit','contain')
         })
         $ul.append($li)
     })

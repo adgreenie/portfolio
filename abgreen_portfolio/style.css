@@ -110,6 +110,8 @@ h1 {
 .project-button {
     margin: 10px 0 0;
     font-family: sans-serif;
+    height: 0;
+    visibility: hidden;
 }
 
 .text-block {
