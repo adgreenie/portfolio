@@ -1,4 +1,5 @@
 const pages = ['home','about','projects','contact']
+const quote = 'You change the world by being yourself. – Yoko Ono'
 
 let $navList = $('<ul>').addClass('navbar-nav mr-auto')
 
@@ -45,3 +46,16 @@ $(window).scroll(() => {
         $footer.css('bottom', -$footer.height())
     }
  })
+
+let $quote = $('<p>').html(quote)
+let $footer = $('footer')
+
+$(window).width() > 768 ? $footer.append($quote) : ''
+
+$(window).resize(() => {
+    if ($(window).width() <= 768) {
+        $quote.detach()
+    } else {
+        $footer.append($quote)
+    }
+})
