@@ -34,7 +34,7 @@ footer {
 }
 
 footer > p {
-    padding: 15px 0 0;
+    padding: 25px 0 0;
 }
 
 h1 {
@@ -59,6 +59,10 @@ h1 {
     width: 60vw;
     background-color: #EFF0F1;
     margin: 0 auto
+}
+
+.logo {
+    height: 75px;
 }
 
 .page {
