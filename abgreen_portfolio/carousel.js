@@ -19,7 +19,7 @@ fetch(imgSource)
 
 function addImages(images) {
     // uses Bootstrap carousel framework, found here: https://getbootstrap.com/docs/4.0/components/carousel/
-    $('#home').append(`<div id="homeCarousel" class="carousel slide page-content" data-ride="carousel">
+    $('#home').append(`<div id="homeCarousel" class="carousel slide section-content" data-ride="carousel">
                             <ol class="carousel-indicators"></ol>
                             <div class="carousel-inner"></div>
                             <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">

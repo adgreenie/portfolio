@@ -2,7 +2,7 @@
 let aboutId = '1GugDLpqIMNFKVZZkAWyH4oAt3DLkLKxEsRbMiEYvQgY'
 let aboutSource = `https://spreadsheets.google.com/feeds/list/${aboutId}/od6/public/values?alt=json`
 
-// API call for image and text on About page
+// API call for image and text on About section
 fetch(aboutSource)
     .then(response => response.json())
     .then(data => {
@@ -15,7 +15,7 @@ fetch(aboutSource)
     .catch(err => console.log('err', err))
 
 function addAbout(aboutMe) {
-    let $div = $('#about').find('div.page-content')
+    let $div = $('#about').find('div.section-content')
     $div.append(`<img class="circle-img" src="${aboutMe.image}">
                 <p class="text-block">${aboutMe.text}</p>`)
 }

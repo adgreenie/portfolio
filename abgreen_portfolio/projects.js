@@ -2,7 +2,7 @@
 let projectsId = '19l0xoqkGrebEHkghxC_OxA2PZbiAPmdOtf2DpZ3guV8'
 let projectsSource = `https://spreadsheets.google.com/feeds/list/${projectsId}/od6/public/values?alt=json`
 
-// API call for content on Projects page
+// API call for content on Projects section
 fetch(projectsSource)
     .then(response => response.json())
     .then(data => {
@@ -19,7 +19,7 @@ fetch(projectsSource)
     .catch(err => console.log('err', err))
 
 function addProjects(projects) {
-    let $div = $('#projects').find('div.page-content')
+    let $div = $('#projects').find('div.section-content')
     let $ul = $('<ul>').addClass('project-list')
     
     projects.forEach((project, i) => {

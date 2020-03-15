@@ -1,26 +1,26 @@
-const pages = ['home','about','projects','contact']
+const sections = ['home','about','projects','contact']
 const quote = 'You change the world by being yourself. – Yoko Ono'
 
 let $navList = $('<ul>').addClass('navbar-nav mr-auto')
 
-pages.forEach((page, i) => {
-    // add page to site
-    let $div = $(`<div id="${page}" class="page"></div>`)
+sections.forEach((section, i) => {
+    // add section to site
+    let $div = $(`<div id="${section}" class="section"></div>`)
     if (i > 0) {
-        $div.append(`<h1>${page}</h1>
-                    <div class="page-frame page-top"></div>
-                    <div id="${page}-content" class="page-content"></div>
-                    <div class="page-frame page-bottom"></div>`)
+        $div.append(`<h1>${section}</h1>
+                    <div class="section-frame section-top"></div>
+                    <div id="${section}-content" class="section-content"></div>
+                    <div class="section-frame section-bottom"></div>`)
     }
     $('main').append($div)
 
-    // add page name to navbar
+    // add section name to navbar
     let $li = $(`<li class="nav-item">
-                    <a class="nav-link" href="#${page}">${page}</a>
+                    <a class="nav-link" href="#${section}">${section}</a>
                 </li>`)
     $navList.append($li)
     
-    // test to see if user is currently viewing this page
+    // test to see if user is currently viewing this section
     $(window).scroll(() => {
         let viewTop = $(window).scrollTop()
         let divTop = $div.offset().top
