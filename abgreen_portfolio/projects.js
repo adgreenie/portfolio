@@ -19,6 +19,7 @@ fetch(projectsSource)
     .catch(err => console.log('err', err))
 
 function addProjects(projects) {
+    let $div = $('#projects').find('div.page-content')
     let $ul = $('<ul>').addClass('project-list')
     
     projects.forEach((project, i) => {
@@ -49,5 +50,5 @@ function addProjects(projects) {
         })
         $ul.append($li)
     })
-    $('#projects').append($ul)
+    $div.append($ul)
 }

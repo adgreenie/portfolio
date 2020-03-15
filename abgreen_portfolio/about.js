@@ -15,7 +15,7 @@ fetch(aboutSource)
     .catch(err => console.log('err', err))
 
 function addAbout(aboutMe) {
-    $about = $('#about')
-    $about.append(`<img class="circle-img" src="${aboutMe.image}">`)
-    $about.append(`<p class="text-block">${aboutMe.text}</p>`)
+    let $div = $('#about').find('div.page-content')
+    $div.append(`<img class="circle-img" src="${aboutMe.image}">
+                <p class="text-block">${aboutMe.text}</p>`)
 }

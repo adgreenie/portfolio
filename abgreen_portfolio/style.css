@@ -38,12 +38,14 @@ footer > p {
 }
 
 h1 {
-    text-align: center;
+    padding: 60px 0 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
     text-transform: uppercase;
 }
 
 .carousel-img {
-    height: 80vh;
+    height: 85vh;
     object-fit: cover;
 }
 
@@ -66,10 +68,33 @@ h1 {
 }
 
 .page {
-    padding: 70px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(4, auto);
     width: 100vw;
-    min-height: 100vh;
     transition: opacity .5s;
+}
+
+.page-content {
+    margin: 40px 0;
+    grid-column: 1/4;
+    grid-row: 3/4;
+}
+
+.page-frame {
+    background-color: black;
+    height: 5px;
+    max-width: 50vw;
+}
+
+.page-top {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.page-bottom {
+    grid-column: 3/4;
+    grid-row: 4/5;
 }
 
 .project-list {
@@ -126,10 +151,18 @@ h1 {
     font-size: 1.3em;
 }
 
+#contact-content {
+    padding: 0 30px 10vh;
+}
+
 /* tablet */
 @media (min-width: 768px) {
     .text-block {
         width: 80vw;
+    }
+    #contact-content {
+        grid-column: 2/3;
+        padding: 0 0 10vh;
     }
 }
 

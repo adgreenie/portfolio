@@ -1,8 +1,10 @@
 // I found a free-use template (link below), which utilizes Bootstrap and was exactly what I wanted for my Contact page.
 // https://graygrids.com/php-and-ajax-based-contact-form-for-bootstrap-and-html5/
-// While this only required minor edits, I still took the time to examine elements in the HTML.
+// While this only required minor edits apart from the border, I still took the time to examine elements in the HTML.
 
-$('#contact').append(`<form role="form" id="contactForm" class="contact-form" data-toggle="validator" class="shake" style="max-width: 80vw; margin: 20px auto;">
+let $div = $('#contact').find('div.page-content')
+
+$div.append(`<form role="form" class="shake" data-toggle="validator">
                         <div class="form-group">
                             <div class="controls">
                                 <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name">

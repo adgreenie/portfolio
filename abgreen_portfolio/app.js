@@ -7,9 +7,10 @@ pages.forEach((page, i) => {
     // add page to site
     let $div = $(`<div id="${page}" class="page"></div>`)
     if (i > 0) {
-        $div.append(`<div class="divider"></div>
-                    <h1>${page}</h1>
-                    <div class="divider"></div>`)
+        $div.append(`<h1>${page}</h1>
+                    <div class="page-frame page-top"></div>
+                    <div id="${page}-content" class="page-content"></div>
+                    <div class="page-frame page-bottom"></div>`)
     }
     $('main').append($div)
 
