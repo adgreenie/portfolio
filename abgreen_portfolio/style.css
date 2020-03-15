@@ -56,13 +56,6 @@ h1 {
     border-radius: 50%;
 }
 
-.divider {
-    padding: 2px;
-    width: 55vw;
-    background-color: #EFF0F1;
-    margin: 0 auto
-}
-
 .logo {
     height: 75px;
 }
@@ -84,7 +77,6 @@ h1 {
 .section-frame {
     background-color: black;
     height: 5px;
-    max-width: 60vw;
 }
 
 .section-top {
