@@ -80,6 +80,7 @@ h1 {
 .section-bottom {
     grid-column: 3/4;
     grid-row: 5/6;
+    margin-bottom: 20vh;
 }
 
 .project-list {
@@ -164,7 +165,6 @@ h1 {
 
 #contact-content {
     width: 60vw;
-    padding: 10px 0 10vh;
 }
 
 /* tablet */
