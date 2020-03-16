@@ -1,4 +1,3 @@
-
 // https://docs.google.com/spreadsheets/d/1-ZlnyCZ-h5ZsVR3nPYxkpS46DVsx8mYcHLlAGAWtPNs/edit#gid=0
 let imgId = '1-ZlnyCZ-h5ZsVR3nPYxkpS46DVsx8mYcHLlAGAWtPNs'
 let imgSource = `https://spreadsheets.google.com/feeds/list/${imgId}/od6/public/values?alt=json`

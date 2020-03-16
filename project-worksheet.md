@@ -53,40 +53,43 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 
 ## Functional Components
 
+Unless otherwise stated, all time is in hours.
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Page Framework | H | 3hrs |  |  |
-| Header | H | 1hr |  |  |
-| Footer | H | 1hr |  |  |
-| "About" section Layout | H | 2hrs |  |  |
-| "Projects" section Layout | H | 4hrs |  |  |
-| "Contact" section Layout | H | 3hrs |  |  |
-| Hamburger Menu | H | 4hrs |  |  |
-| Make page dynamic | H | 3hrs |  |  |
-| Implement API call | H | 2hrs |  |  |
-| Basic Styling | H | 2hrs |  |  |
-| Additional Styling | M | 3hrs |  |  |
-| Carousel Animation | H | 2hrs |  |  |
-| Scrolling Animation | M | 3hrs |  |  |
-| Additional Animation | L | 3hrs |  |  |
-| Total | H | 36hrs |  |  |
+| Page Framework | H | 3 | 8 | 8 (went through a few versions) |
+| Header | H | 1 | 2 | 2 |
+| Footer | H | 1 | 3 | 3 |
+| "About" section Layout | H | 2 | 2 | 2 |
+| "Projects" section Layout | H | 4 | 8.5 | 8.5 |
+| "Contact" section Layout | H | 3 | 2 | 2 |
+| Hamburger Menu | H | 4 | 1.5 | 1.5 |
+| Make page dynamic | H | 3 | 4.5 | 4.5 |
+| Implement API call | H | 2 | 3 | 3 (did 3!) |
+| Basic Styling | H | 2 | 2 | 2 |
+| Additional Styling | M | 3 | 5 | 5.5 |
+| Carousel Animation | H | 2 | 4 | 4 (couldn't manage to make play on load) |
+| Scrolling Animation | M | 3 | 1 | Removed |
+| Additional Animation | L | 3 | 1.5 | 1.5 |
+| Total | H | 36 | 48.5 | 48.5 |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+
+Bootstrap
+- Navbar: https://getbootstrap.com/docs/4.0/components/navbar/
+- Carousel: https://docs.google.com/spreadsheets/d/1-ZlnyCZ-h5ZsVR3nPYxkpS46DVsx8mYcHLlAGAWtPNs/edit#gid=0
+- Contact form: https://graygrids.com/php-and-ajax-based-contact-form-for-bootstrap-and-html5/
+
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+I'm proud of the solution I devised to alternate the sides each project and matching description appears on. The variable 'side' is set to 'left' if the index is even, and 'right' if the index is odd. In order to be able to access the opposite value, the array has 'left' repeated as a third element. This way, the next string over in the array will always be the opposite side. I used string template literals to insert the correct sides as strings directly into the style attributes.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+projects.forEach((project, i) => {
+	let sides = ['left','right','left']
+	let side = i % 2 // 0 if image is on left, 1 if on right
+	let $li = $(`<li class="project">
+					<p style="padding-${sides[side+1]}: 10px; margin: 0;">
+						<img src="${project.image}" alt="${project.title}" class="project-img" style="float: ${sides[side]}; margin-${sides[side+1]}: 10px;">
+						...
 ```
-
-## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
-
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
