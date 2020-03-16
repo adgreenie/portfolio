@@ -59,18 +59,18 @@ Unless otherwise stated, all time is in hours.
 | Page Framework | H | 3 | 8 | 8 (went through a few versions) |
 | Header | H | 1 | 2 | 2 |
 | Footer | H | 1 | 3 | 3 |
-| "About" section Layout | H | 2 | 2 | 2 |
-| "Projects" section Layout | H | 4 | 8.5 | 8.5 |
-| "Contact" section Layout | H | 3 | 2 | 2 |
+| "About" Section Layout | H | 2 | 2 | 2 |
+| "Projects" Section Layout | H | 4 | 8.5 | 8.5 |
+| "Contact" Section Layout | H | 3 | 2 | 2 |
 | Hamburger Menu | H | 4 | 1.5 | 1.5 |
-| Make page dynamic | H | 3 | 4.5 | 4.5 |
-| Implement API call | H | 2 | 3 | 3 (did 3!) |
+| Make Page Responsive | H | 3 | 5.5 | 5.5 |
+| Implement API Call | H | 2 | 3 | 3 (did 3!) |
 | Basic Styling | H | 2 | 2 | 2 |
 | Additional Styling | M | 3 | 5 | 5.5 |
-| Carousel Animation | H | 2 | 4 | 4 (couldn't manage to make play on load) |
+| Carousel Animation | H | 2 | 4 | 4 (struggling to make play on load) |
 | Scrolling Animation | M | 3 | 1 | Removed |
 | Additional Animation | L | 3 | 1.5 | 1.5 |
-| Total | H | 36 | 48.5 | 48.5 |
+| Total | H | 36 | 49.5 | 49.5 |
 
 ## Additional Libraries
 
