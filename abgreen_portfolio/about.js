@@ -16,6 +16,7 @@ fetch(aboutSource)
 
 function addAbout(aboutMe) {
     let $div = $('#about').find('div.section-content')
-    $div.append(`<img class="circle-img" src="${aboutMe.image}">
-                <p class="text-block">${aboutMe.text}</p>`)
+    $div.before(`<img id="about-img" src="${aboutMe.image}" alt="Profile Picture">`)
+    $div.append('<p>').html(aboutMe.text)
+    $div.after(`<img src="https://res.cloudinary.com/dnj7porin/image/upload/v1584143970/lucky_green_logo_rgywyb.png" id="about-logo" alt="logo">`)
 }

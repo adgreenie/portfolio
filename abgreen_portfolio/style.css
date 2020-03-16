@@ -49,29 +49,22 @@ h1 {
     object-fit: cover;
 }
 
-.circle-img {
-    max-height: 50vh;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 50%;
-}
-
 .logo {
     height: 75px;
 }
 
 .section {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
     width: 100vw;
     transition: opacity .5s;
 }
 
 .section-content {
-    margin: 40px 0;
+    margin: 10px auto 40px;
     grid-column: 1/4;
-    grid-row: 3/4;
+    grid-row: 4/5;
 }
 
 .section-frame {
@@ -86,7 +79,7 @@ h1 {
 
 .section-bottom {
     grid-column: 3/4;
-    grid-row: 4/5;
+    grid-row: 5/6;
 }
 
 .project-list {
@@ -131,20 +124,43 @@ h1 {
     visibility: hidden;
 }
 
-.text-block {
-    width: 90vw;
-    max-width: 675px;
-    margin: 10px auto;
+#about-img {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    max-height: 50vh;
+    max-width: 90%;
+    display: block;
+    margin: 10px auto 0;
     padding: 10px;
+    border-radius: 50%;
+}
+
+#about-content {
+    padding: 10px;
+    max-width: 90vw;
     text-align: justify;
     background-color: #EFF0F1;
     border: 5px solid #EFF0F1;
     border-radius: 15px;
-    font-size: 1.3em;
+    font-size: 1.2em;
+}
+
+#about-logo {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    max-height: 50vh;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #69c07e;
+    border: 8vw inset #69c07e;
+    border-radius: 50%;
+    visibility: hidden;
 }
 
 #contact-content {
-    padding: 0 30px 10vh;
+    width: 60vw;
+    padding: 10px 0 10vh;
 }
 
 /* tablet */
@@ -152,13 +168,16 @@ h1 {
     .section-frame {
         max-width: 50vw;
     }
-    .text-block {
-        width: 80vw;
+    #about-img {
+        grid-column: 2/3;
+        max-width: 100%;
+    }
+    #about-content {
+        max-width: 70vw;
     }
     #contact-content {
-        grid-column: 2/3;
-        padding: 0 0 10vh;
-    }
+        width: 40vw;
+    }    
 }
 
 /* desktop */
@@ -169,5 +188,20 @@ h1 {
     .project-img {
         width: 25vw;
         height: 15vw;
+    }
+    #about-img {
+        grid-column: 1/2;
+        padding-left: 10px;
+    }
+    #about-content {
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+    #about-logo {
+        visibility: visible;
+    }
+    #contact-content {
+        grid-column: 2/3;
+        width: 100%;
     }
 }
