@@ -18,21 +18,21 @@ fetch(imgSource)
 
 function addImages(images) {
     // uses Bootstrap carousel framework, found here: https://getbootstrap.com/docs/4.0/components/carousel/
-    $('#home').append(`<div id="homeCarousel" class="carousel slide section-content" data-ride="carousel">
+    $('#home').append(`<div id="home-carousel" class="carousel slide section-content" data-ride="carousel">
                             <ol class="carousel-indicators"></ol>
                             <div class="carousel-inner"></div>
-                            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#home-carousel" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#home-carousel" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>`)
 
     images.forEach((image, i) => {
-        let $li = $(`<li data-target="#homeCarousel" data-slide-to="${i}"></li>`)
+        let $li = $(`<li data-target="#home-carousel" data-slide-to="${i}"></li>`)
         let active = ' active'
         i === 0 ? $li.addClass('active') : active = ''
         $('.carousel-indicators').append($li)

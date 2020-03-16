@@ -124,6 +124,10 @@ h1 {
     visibility: hidden;
 }
 
+#home-carousel {
+    margin-top: 50px;
+}
+
 #about-img {
     grid-column: 1/4;
     grid-row: 3/4;
