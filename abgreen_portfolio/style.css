@@ -51,6 +51,9 @@ h1 {
 
 .logo {
     height: 75px;
+    width: 75px;
+    border: 10px inset #69c07e;
+    border-radius: 50%;
 }
 
 .section {
@@ -153,12 +156,12 @@ h1 {
 #about-logo {
     grid-column: 3/4;
     grid-row: 3/4;
-    max-height: 50vh;
+    max-height: 400px;
     width: 90%;
     max-width: 400px;
     margin: 20px auto;
     background-color: #69c07e;
-    border: 8vw inset #69c07e;
+    border: 100px inset #69c07e;
     border-radius: 50%;
     visibility: hidden;
 }
