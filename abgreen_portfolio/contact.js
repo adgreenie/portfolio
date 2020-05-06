@@ -38,44 +38,48 @@ $div.append($form)
 
 function submitForm(e){
     e.preventDefault();
-    console.log("form submitted")
     // Initiate Variables With Form Content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var msg_subject = $("#msg_subject").val();
-    var message = $("#message").val();
-
-    $.ajax({
-        type: "POST",
-        url: "/portfolio/abgreen_portfolio/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
-        }
-    });
-}
-
-function formSuccess(){
-    $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
-}
-
-function formError(){
-    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).removeClass();
-    });
-}
-
-function submitMSG(valid, msg){
-    if(valid){
-        var msgClasses = "h3 text-center tada animated text-success";
-    } else {
-        var msgClasses = "h3 text-center text-danger";
+    const contactInfo = {
+        name: $("#name").val(),
+        email: $("#email").val(),
+        subject: $("#msg_subject").val(),
+        message: $("#message").val()
     }
-    $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+    axios.post('https://agreen-portfolio-messages.herokuapp.com/messages', contactInfo)
+        .then(resp => {
+            console.log(resp.data)
+        })
+        .catch(err => console.error(err))
+    $("#contactForm")[0].reset();
+    
+    const msgClasses = "submit-message h3 text-center text-success"
+    $("#msgSubmit")
+        .removeClass()
+        .addClass(msgClasses)
+        .text("Submitted - Thank you!")
+
+    // $.ajax({
+    //     type: "POST",
+    //     url: "/portfolio/abgreen_portfolio/form-process.php",
+    //     data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
+    //     success : function(text){
+    //         if (text == "success"){
+    //             formSuccess();
+    //         } else {
+    //             formError();
+    //             submitMSG(false,text);
+    //         }
+    //     }
+    // });
 }
+
+// function formSuccess(){
+//     $("#contactForm")[0].reset();
+//     submitMSG(true, "Message Submitted!")
+// }
+
+// function formError(){
+//     $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+//         $(this).removeClass();
+//     });
+// }

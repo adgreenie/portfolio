@@ -128,6 +128,10 @@ h1 {
     visibility: hidden;
 }
 
+.submit-message {
+    margin-top: 15px;
+}
+
 #home-carousel {
     margin-top: 50px;
 }
