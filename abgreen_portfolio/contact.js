@@ -47,7 +47,7 @@ function submitForm(e){
 
     $.ajax({
         type: "POST",
-        url: "/form-process.php",
+        url: "/portfolio/abgreen_portfolio/form-process.php",
         data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
         success : function(text){
             if (text == "success"){
