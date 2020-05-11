@@ -1,5 +1,5 @@
 const sections = ['home','about','projects','contact']
-const quote = 'You change the world by being yourself. – Yoko Ono'
+const quote = '“Impossible is for the unwilling.” - John Keats'
 
 let $navList = $('<ul>').addClass('navbar-nav mr-auto')
 
